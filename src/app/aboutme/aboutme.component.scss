@@ -1,0 +1,234 @@
+.aboutMeContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 135px;
+    padding-top: 100px;
+
+    .backgroundShadow {
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        right: 0px;
+        top: -310px;
+        width: 741px;
+        height: 744px;
+        opacity: 0.5;
+
+        img {
+            position: absolute;
+            top: 50px;
+            right: 2px;
+            width: 300px;
+        }
+    }
+
+    .aboutMeDescription {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        max-width: 471px;
+        gap: 35px;
+        padding-left: 100px;
+        z-index: 2;
+    }
+
+    h2 {
+        margin: 0px;
+        font-size: 90px;
+        white-space: nowrap;
+    }
+
+    p {
+        margin: 0px;
+        font-size: 16px;
+    }
+}
+
+.bulbContainer {
+    display: flex;
+    gap: 35px;
+
+    img {
+        &:hover {
+            scale: 1.2;
+        }
+    }
+}
+
+.puzzleContainer {
+    display: flex;
+    gap: 35px;
+
+    img {
+        &:hover {
+            scale: 1.2;
+        }
+    }
+}
+
+.aboutMePhotoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.aboutMePhoto {
+    border-radius: 100%;
+    border: 4px solid rgb(1,186,227);
+    max-width: 609px;
+    max-height: 509px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 3;
+    background-color: rgb(20, 29, 47);
+
+    img {
+        position: relative;
+        top: 20px;
+        height: 700px;
+        transform: scaleX(-1);
+    }
+}
+
+.aboutMeBorderRight {
+    border: 2px solid rgb(1,186,227);
+    width: 60px;
+    z-index: 3;
+    height: 0;
+    display: flex;
+    padding-right: 20%;
+}
+
+
+
+
+
+@media screen and (min-width: 3000px) {
+    .aboutMePhotoContainer{
+        width: 55%;
+    }
+
+    .aboutMeContainer{
+        padding-left: 23%;
+        
+    }
+
+    .aboutMeBorderRight{
+        padding-right: 60%;
+    }
+    
+
+}
+
+@media screen and (max-width: 3000px) {
+    .aboutMePhotoContainer{
+        width: 50%;
+    }
+
+    .aboutMeContainer{
+        padding-left: 17%;
+        
+    }
+
+    .aboutMeBorderRight{
+        padding-right: 50%;
+    }
+    
+
+}
+
+@media screen and (max-width: 1900px) {
+    .aboutMePhotoContainer{
+        width: 35%;
+    }
+
+    .aboutMeContainer{
+        padding-left: 7%;
+        
+    }
+
+    .aboutMeBorderRight{
+        padding-right: calc(55% - 180px);
+    }
+
+    
+    
+
+}
+
+@media screen and (max-width: 1800px) {
+    .aboutMePhoto {
+        max-width: 509px;
+        max-height: 409px;
+
+        img {
+            top: 40px;
+            height: 600px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1150px) {
+    .aboutMePhoto {
+        max-width: 350px;
+        max-height: 300px;
+
+        img {
+            top: 0px;
+            height: 360px;
+        }
+    }
+
+    .aboutMeBorderRight[_ngcontent-ng-c3976908094] {
+        padding-right: 10%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .aboutMePhotoContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .aboutMeContainer {
+        padding-bottom: 135px;
+        margin-top: 160px;
+    }
+
+    .backgroundShadow {
+        top: -10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .aboutMeContainer {
+        padding-left: 25px;
+        padding-right: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutMeDescription {
+        padding: 0px !important;
+        max-width: none !important;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .aboutMeContainer{
+        margin: 0px;
+        padding-bottom: 75px;
+
+        h2{
+            font-size: 45px;
+        }
+    }
+}

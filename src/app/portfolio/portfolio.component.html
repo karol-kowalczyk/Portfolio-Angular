@@ -1,0 +1,46 @@
+<div class="portfolioHeadlineContainer" id="portfolio">
+    <span class="portfolioHeadlineBox">
+        <div class="skillBorderLeft"></div>
+        <span>
+            <h2>Portfolio</h2>
+        </span>
+        <div class="skillBorderRight"></div>
+    </span>
+</div>
+
+<span class="headlineTextContainer">
+    <p>{{ 'sampleWorkDetails' | translate }}</p>
+</span>
+
+
+<div class="allProjectsContainer">
+    <div class="portfolioBackground"><img src="assets/img/purple2.png"></div>
+    <div class="secondPortfolioBackground"><img src="assets/img/light1.png"></div>
+    <div *ngFor="let project of projects; let i = index">
+      <div [ngStyle]="{ 'flex-direction': i % 2 !== 0 ? 'row-reverse' : 'row' }"
+        [attr.data-aos]="i % 2 !== 0 ? 'fade-left' : 'fade-right'" class="portfolioProjectContainer">
+        <div class="projectImageContainer" [ngStyle]="{ 'justify-content': i % 2 !== 0 ? 'flex-end' : 'flex-start' }">
+          <img src="assets/img/{{ project.image }}">
+        </div>
+        <div class="projectTextContainer">
+          <div class="projectText" [ngStyle]="{ 'text-align': i % 2 !== 0 ? 'end' : 'start' }">
+            <span class="projectName">{{ project.name }}</span>
+            <span class="projectLanguages">{{ project.languages }}</span>
+            <span class="projectDescription">{{ getProjectDescription(project) }}</span>
+          </div>
+          <div class="projectButtonsContainer" [ngStyle]="{ 'justify-content': i % 2 !== 0 ? 'flex-end' : 'flex-start' }">
+            <div class="liveTest" [ngStyle]="{ 'display': project.name === 'My website' ? 'none' : 'flex' }">
+              <a href="{{ project.url }}" target="_blank">
+                <span>{{ 'Live test' }}</span>
+              </a>
+            </div>
+            <div class="github">
+              <a href="{{ project.github }}" target="_blank">
+                <span>{{ 'Github' }}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,159 @@
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 291px;
+    border-top: 4px solid rgb(1,186,227);
+    color: white;
+    background-color: rgba(20, 29, 47, 1);
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 90px;
+}
+
+
+.footerLineContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    img{
+        height: 40px;
+        width: 65px;
+        cursor: pointer;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(1,186,227);
+            bottom: 0px; /* Positionieren Sie den Unterstrich unterhalb des Texts */
+            left: 0;
+            transform: scaleX(0); /* Starten Sie ohne Breite (unsichtbar) */
+            transform-origin: left center;
+            transition: transform 0.30s ease-in-out;
+          }
+        
+          &:hover {
+            color: rgb(72,69,242);
+            &::before {
+              transform: scaleX(1); /* Unterstrich von links nach rechts ausdehnen */
+            }
+          }
+    }
+}
+
+.copyRightContainer{
+    display: flex;
+    p {
+       font-size: 28px; 
+    }
+}
+
+.contactFooter{
+    display: flex;
+    gap: 42px;
+}
+
+.contactIcon{
+    display: flex;
+
+    &:hover{
+        scale: 1.2;
+    }
+}
+
+.impPriContainerResponsiv{
+    display: none;
+}
+
+@media screen and (min-width: 3000px) {
+    .footerContainer{
+    padding-left: 25%;
+    padding-right: 25%;
+    }
+}
+
+@media screen and (max-width: 3000px) {
+    .footerContainer{
+    padding-left: 20%;
+    padding-right: 20%;
+    }
+}
+
+
+
+@media screen and (max-width: 1900px) {
+    .footerContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    
+    .footerContainer{
+        padding-top: 66px;
+        flex-direction: column;
+        justify-content: center;
+      
+    }
+
+    .impPriContainer{
+        display: none;
+    }
+
+    .impPriContainerResponsiv{
+    display: flex;
+    gap: 5px;
+    padding-top: 28px;
+    padding-bottom: 73px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(1,186,227);
+            bottom: 0px; /* Positionieren Sie den Unterstrich unterhalb des Texts */
+            left: 0;
+            transform: scaleX(0); /* Starten Sie ohne Breite (unsichtbar) */
+            transform-origin: left center;
+            transition: transform 0.30s ease-in-out;
+          }
+        
+          &:hover {
+            color: rgb(72,69,242);
+            &::before {
+              transform: scaleX(1); /* Unterstrich von links nach rechts ausdehnen */
+            }
+          }
+    }
+    }
+
+    @media screen and (max-width: 767px) {
+        .footerContainer{
+            padding-top: 66px;
+            padding-left: 0px;
+            padding-right: 0px;
+          
+        }
+    }
+    
+}
+

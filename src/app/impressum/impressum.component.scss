@@ -1,0 +1,32 @@
+.impContainer{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 120px;
+    padding-left: 100px;
+    flex-direction: column;
+    padding-right: 100px;
+    padding-bottom: 120px;
+    color: white;    
+    h1{
+        font-size: 47px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+
+        &:hover{
+            color: rgba(112, 230, 28, 1);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .impContainer{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+  }
+  

@@ -1,0 +1,38 @@
+<div class="navbarContainer" >
+    <div class="initialsContainer">
+       <span class="name">Karol Kowalczyk</span>
+    </div>
+    <div class="navbarLinkContainer">
+        <a translate href="#aboutMe">About me</a>
+        <a translate href="#mySkills">Skills</a>
+        <a translate href="#portfolio">Portfolio</a>
+        <div>
+            <a (click)="translate.use('de');">DE</a>
+            <b> | </b>
+            <a (click)="translate.use('en');">EN</a>
+        </div>
+    </div>
+    <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
+    <label for="checkbox3" class="burgerIcon">
+        <div class="hamburger hamburger3" (click)="toggleNav()">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+        </div>
+    </label>
+
+    </div>
+    <div class="burgerLinks" [ngClass]="{'open': isMenuOpen}">
+      <a translate href="#aboutMe" (click)="toggleNav()">About me</a>
+      <a translate href="#mySkills" (click)="toggleNav()">Skills</a>
+      <a translate href="#portfolio" (click)="toggleNav()">Portfolio</a>
+      <a translate href="#contact" (click)="toggleNav()">Contact</a>
+      <div>
+        <a (click)="translate.use('de');">DE</a>
+        <b> | </b>
+        <a (click)="translate.use('en');">EN</a>
+    </div>
+      
+    </div>
+ 

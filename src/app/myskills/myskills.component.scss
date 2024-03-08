@@ -1,0 +1,267 @@
+.skillContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 135px;
+}
+
+.backgroundShadowSkill {
+  display: flex;
+  position: absolute;
+  left: 10px;
+  width: 200%;
+  opacity: 0.5;
+  
+}
+
+.skillIconContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 721px;
+  gap: 54px 123px;
+  z-index: 3;
+  margin-left: 100px;
+}
+
+.skillIconBox {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 88px;
+  height: 100px;
+
+  &:hover img {
+    animation: jumpIcon 00.3s ease normal forwards;
+  }
+}
+
+@keyframes jumpIcon {
+  0% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  60% {
+    animation-timing-function: ease-in;
+    transform: translateY(-5px);
+  }
+
+  80% {
+    animation-timing-function: ease-in;
+    transform: translateY(-2px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+}
+
+.skillTextContainer {
+  color: white;
+  display: flex;
+  width: 471px;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 100px;
+  margin-left: 100px;
+  gap: 30px;
+
+  h2 {
+    font-size: 90px;
+    margin: 0px;
+    white-space: nowrap;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0px;
+    text-align: right;
+  }
+}
+
+.skillHeadline {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 42px;
+}
+
+.skillBorderRight {
+  position: absolute;
+  right: 0px;
+  width: 58px;
+  border: 2px solid rgb(1,186,227);
+}
+
+.letsTalkButtonResponsiv{
+    display: none;
+}
+
+.letsTalkButton {
+  display: flex;
+  margin-right: 114px;
+  margin-top: 25px;
+  min-width: 168px;
+  min-height: 58px;
+  cursor: pointer;
+  transition: transform 325ms ease-in-out;
+  z-index: 5;
+}
+
+.letsTalkButton:hover {
+  transform: scale(1.1);
+}
+
+.letsTalkButton a {
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: rgb(1,186,227);
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.letsTalkButton a:hover {
+  background-color: rgb(72,69,242);
+}
+
+@media screen and (min-width: 3000px) {
+  .skillIconContainer{
+    margin-left: 25%;
+  }
+  
+  .skillTextContainer{
+    margin-right: 25%;
+  }
+  
+  .skillBorderRight{
+    width: 22%;
+  }
+  
+
+}
+@media screen and (max-width: 3000px) {
+  .skillIconContainer{
+    margin-left: 20%;
+  }
+  
+  .skillTextContainer{
+    margin-right: 25%;
+  }
+  
+  .skillBorderRight{
+    width: 22%;
+  }
+  
+
+}
+
+@media screen and (max-width: 1900px) {
+  .skillIconContainer{
+    margin-left: 10%;
+  }
+  
+  .skillTextContainer{
+    margin-right: 10%;
+  }
+  
+  .skillBorderRight{
+    width: 7%;
+  }
+
+}
+
+
+@media screen and (max-width: 970px) {
+  .skillContainer {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-top: 135px;
+    align-items: flex-end;
+  }
+
+  .letsTalkButton {
+    display: none;
+  }
+
+  .skillIconContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto !important;
+    gap: 45px 70px;
+    padding: 100px;
+    margin: 0;
+
+  }
+
+  .skillIconBox {
+    width: 64px;
+    height: 100px;
+  
+    &:hover img {
+      animation: jumpIcon 00.3s ease normal forwards;
+    }
+  }
+
+  .letsTalkButtonResponsiv {
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    cursor: pointer;
+    justify-content: center;
+    z-index: 4;
+  }
+  
+
+  .letsTalkButtonResponsiv a {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: rgb(1,186,227);
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  .letsTalkButtonResponsiv a:hover {
+    background-color: rgba(151, 71, 255, 1);
+    transform: scale(1.1);
+    transition: transform 325ms ease-in-out;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .skillHeadline{
+    h2{
+      font-size: 45px;
+    }
+  }
+
+  .skillTextContainer{
+    margin-right: 26px;
+    margin-left: 26px;
+    width: auto;
+  }
+
+  .skillBorderRight{
+    width: 20px;
+  }
+  .skillIconContainer{
+    padding: 65px 25px 65px 25px;
+  }
+}

@@ -1,0 +1,23 @@
+<div id="mySkills" class="scroll-adjust"></div>
+<div class="skillContainer" >
+    <div class="letsTalkButtonResponsiv">
+        <a translate href="#contact">Get in touch</a>
+    </div>
+    <div class="backgroundShadowSkill">
+        <img src="assets/img/blue1.png" alt="" srcset="">
+    </div>
+    <div class="skillIconContainer">
+        <div  data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" class="skillIconBox" *ngFor="let icon of skillIcon"><img src="assets/img/{{icon}}.png" alt="{{icon}}"
+                srcset=""><span>{{icon}}</span></div>
+    </div>
+    <div class="skillTextContainer">
+        <div class="skillHeadline">
+            <span><h2 translate>My skills</h2></span>
+            <div class="skillBorderRight"></div>
+        </div>
+        <span><p>{{ 'experienceDetails' | translate }}</p></span>
+        <div class="letsTalkButton"><a translate href="#contact">Get in touch</a></div>
+    </div>
+</div>

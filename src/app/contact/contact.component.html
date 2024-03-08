@@ -1,0 +1,142 @@
+<div class="contactContainer" id="contact">
+  <span class="headline">
+    <div class="headlineBorder"></div>
+    <h2 translate>Contact</h2>
+  </span>
+
+  <div class="headlineTextContactContainer">
+    <div class="headlineText">
+      <div data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <h3 translate>Got a problem to solve?</h3>
+      </div>
+      <div data-aos="fade-up"
+      data-aos-duration="3000">
+      <p>{{ 'contactFormDescription' | translate }}</p>
+      </div>
+      <div data-aos="fade-up"
+      data-aos-duration="3000">
+      <p>{{ 'needFrontendDevMessage' | translate }} <b translate>Contact me!</b></p>
+      </div>
+    </div>
+    <div class="contactBox">
+      <div class="form-container">
+        <form  action="https://formspree.io/f/myyqoebp"
+        method="POST" (ngSubmit)="sendMail()" [formGroup]="contactForm">
+    
+          <div class="inputContainer">
+            <input [ngClass]="{
+              'green-border': contactForm.get('nameInput')?.valid,
+              'red-border': contactForm.get('nameInput')?.invalid && (contactForm.get('nameInput')?.dirty || contactForm.get('nameInput')?.touched)
+            }" 
+            minlength="3" 
+            onkeydown="return /[a-z, ]/i.test(event.key)" 
+            formControlName="nameInput" 
+            [placeholder]="'placeholderName' | translate" 
+            type="text" 
+            name="name" />
+    
+            <div *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
+              <span class="required-informations" *ngIf="contactForm.controls['nameInput'].errors?.['required']">
+                {{ 'nameRequiredErrorMessage' | translate }}
+              </span>
+              <span class="required-informations" *ngIf="contactForm.controls['nameInput'].errors?.['minlength']">
+                {{ 'nameMinLengthErrorMessage' | translate }}
+              </span>
+            </div>
+    
+            <div class="errorImage" *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
+              <img src="assets/img/error.png" alt="Error Icon">
+            </div>
+    
+            <div class="confirmImage" *ngIf="contactForm.controls['nameInput'].valid">
+              <img src="assets/img/confirm.png" alt="Confirm Icon">
+            </div>
+          </div>
+    
+          <div class="inputContainer">
+            <input [ngClass]="{
+              'green-border': contactForm.get('emailInput')?.valid,
+              'red-border': contactForm.get('emailInput')?.invalid && (contactForm.get('emailInput')?.dirty || contactForm.get('emailInput')?.touched)
+            }" 
+            formControlName="emailInput" 
+            [placeholder]="'placeholderEmail' | translate" 
+            type="email" 
+            name="email" />
+    
+            <div *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
+              <span class="required-informations" *ngIf="contactForm.controls['emailInput'].errors?.['required']">
+                {{ 'emailRequiredErrorMessage' | translate }}
+              </span>
+              <span class="required-informations" *ngIf="contactForm.controls['emailInput'].hasError('email')">
+                {{ 'invalidEmailErrorMessage' | translate }}
+              </span>
+            </div>
+    
+            <div class="errorImage" *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
+              <img src="assets/img/error.png" alt="Error Icon">
+            </div>
+    
+            <div class="confirmImage" *ngIf="contactForm.controls['emailInput'].valid">
+              <img src="assets/img/confirm.png" alt="Confirm Icon">
+            </div>
+          </div>
+    
+          <div class="inputContainer">
+            <textarea [ngClass]="{
+              'green-border': contactForm.get('messageInput')?.valid,
+              'red-border': contactForm.get('messageInput')?.invalid && (contactForm.get('messageInput')?.dirty || contactForm.get('messageInput')?.touched)
+            }" 
+            formControlName="messageInput" 
+            [placeholder]="'placeholderMessage' | translate" 
+            cols="30" 
+            rows="10"></textarea>
+    
+            <div *ngIf="contactForm.controls['messageInput'].invalid && (contactForm.controls['messageInput'].dirty || contactForm.controls['messageInput'].touched)">
+              <span class="required-informations" *ngIf="contactForm.controls['messageInput'].errors?.['required']">
+                {{ 'messageRequiredErrorMessage' | translate }}
+              </span>
+              <span class="required-informations" *ngIf="contactForm.controls['messageInput'].errors?.['minlength']">
+                {{ 'messageMinLengthErrorMessage' | translate }}
+              </span>
+            </div>
+    
+            <div class="errorImage" *ngIf="contactForm.controls['messageInput'].invalid && (contactForm.controls['messageInput'].dirty || contactForm.controls['messageInput'].touched)">
+              <img src="assets/img/error.png" alt="Error Icon">
+            </div>
+    
+            <div class="confirmImage" *ngIf="contactForm.controls['messageInput'].valid">
+              <img src="assets/img/confirm.png" alt="Confirm Icon">
+            </div>
+          </div>
+    
+          <div class="buttonContainer">
+            <button class="sendMessageButton" 
+              [title]="contactForm.valid ? '' : 'First you need to fill out the contact form'" 
+              [disabled]="!contactForm.valid">
+              <span>{{ 'sendMessageButtonText' | translate }}</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="contactBackgroundShadow"><img src="assets/img/purple3.png" alt=""></div>
+    </div>
+    
+  </div>
+  <div class="goUpContainer">
+    <a routerLink="/">
+      <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 15.828L13.343 20.485C12.9525 20.8755 12.3194 20.8755 11.929 20.485C11.5385 20.0945 11.5385 19.4615 11.929 19.071L18.2928 12.7071C18.6834 12.3166 19.3165 12.3166 19.7071 12.7071L26.071 19.071C26.4614 19.4615 26.4614 20.0945 26.071 20.485C25.6805 20.8755 25.0474 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5522 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z" fill="white"/>
+        <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2"/>
+      </svg>
+    </a>
+  </div>
+    
+ 
+  <div class="confirmation-message-in" 
+  [ngClass]="{'confirmation-error-message-in': errorInfo, 'confirmation-message-out': !formSending}" 
+  *ngIf="formSending || alreadySend">
+  <span *ngIf="!errorInfo">{{ 'messageSentSuccess' | translate }}</span>
+  <span *ngIf="errorInfo">{{ 'messageSentError' | translate }}</span>
+</div>

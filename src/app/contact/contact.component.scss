@@ -1,0 +1,372 @@
+.contactContainer {
+    color: white;
+    padding-top: 100px;
+}
+
+
+.headlineBorder {
+    display: flex;
+    width: 50px;
+    border: 2px solid rgb(1,186,227);
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    h2 {
+        margin: 0;
+        font-size: 90px;
+        line-height: 108px;
+    }
+}
+
+.headlineTextContactContainer {
+    display: flex;
+    margin-top: 85px;
+    gap: 150px;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 32px;
+        margin: 0 0 35px 0;
+    }
+
+    p {
+        margin: 0 0 23px 0;
+    }
+}
+
+.contactBackgroundShadow {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.8;
+    width: 100vw;
+    left: 0px;
+}
+
+.headlineText {
+    width: 473px;
+}
+
+.contactBox {
+    display: flex;
+    flex-direction: column;
+    width: 617px;
+    height: 465px;
+    align-items: center;
+    }
+
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.sendMessageButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 325ms ease-in-out;
+    border-radius: 10px;
+    background-color: rgb(1,186,227);
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    width: 241px;
+    height: 58px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: rgb(72,69,242) !important;
+    }
+}
+
+.sendMessageButton:disabled,
+.sendMessageButton.disabled {
+  cursor: not-allowed;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(128, 128, 128, 0.5); 
+  transform: none; 
+}
+
+/* CSS für Hover-Effekte */
+.sendMessageButton:not(:disabled):hover {
+  transform: scale(1.1);
+  background-color: rgb(1,186,227);
+}
+
+
+.required-informations {
+    display: flex;
+    padding-top: 10px;
+    color: red;
+}
+
+.errorImage {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 1;
+}
+
+.confirmImage {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 1;
+}
+
+.form-container{
+    width: 100%;
+
+    Input {
+        width: 100%;
+        border: 1px solid rgb(1,186,227);
+        border-radius: 10px;
+        color: white;
+        padding: 15px 25px;
+        background-color: rgba(20, 29, 47, 1);
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &::placeholder {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+        &:hover {
+            border: 1px solid rgb(72,69,242);
+        }
+}
+
+.inputContainer{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+
+textarea {
+    width: 100%;
+    height: 170px;
+    border: 1px solid rgb(1,186,227);
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+    background-color: rgba(20, 29, 47, 1);
+    box-sizing: border-box;
+    cursor: pointer;
+    
+    &::-webkit-scrollbar {
+        width: 7px;
+        
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgb(255,255,255);
+        
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgb(29,39,60);
+        
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgb(48, 69, 110);
+    }
+
+    &::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        color: white;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover {
+        border: 1px solid rgb(72,69,242);
+    }
+}
+}
+
+.green-border {
+    border: 1px solid rgba(112, 230, 28, 1)  !important;
+}
+
+.red-border {
+    border: 1px solid red !important;
+}
+
+.goUpContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: 55px;
+  }
+
+  .goUpContainer svg:hover path {
+    fill: #70E61C;
+  }
+
+  .goUpContainer svg:hover rect {
+    stroke: #70E61C;
+  }
+
+.confirmation-message-in {
+    position: fixed;
+    z-index: 2;
+    left: calc(50% - 150px);
+    bottom: 30px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(112, 230, 28, 1);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    animation: confirmationMessageIn 0.5s forwards;
+}
+
+.confirmation-error-message-in {
+    background-color: rgb(255, 0, 0);
+}
+
+.confirmation-message-out {
+    animation: confirmationMessageOut 0.5s forwards;
+}
+
+@keyframes confirmationMessageIn {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 30px;
+    }
+}
+
+@keyframes confirmationMessageOut {
+    from {
+        bottom: 30px;
+    }
+
+    to {
+        bottom: -100px;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .headlineBorder{
+        width: 23%;
+    }
+    .headlineTextContactContainer{
+        margin-left: 25%;
+        margin-right: 25%;
+       
+    }
+
+    .goUpContainer{
+        margin-right: 25%;
+    }
+}
+
+
+@media screen and (max-width: 3000px) {
+    .headlineBorder{
+        width: 18%;
+    }
+    .headlineTextContactContainer{
+        margin-left: 20% !important;
+        margin-right: 20% !important;
+     
+    }
+
+    .goUpContainer{
+        margin-right: 20%;
+    }
+}
+
+
+@media screen and (max-width: 1900px) {
+    .headlineBorder{
+        width: 8%;
+    }
+
+    .headlineTextContactContainer{
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+       
+    }
+
+    .goUpContainer{
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .headlineTextContactContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    gap: 45px
+    
+    }
+
+    .contactBox{
+        width: auto;
+    }
+
+    .goUpContainer{
+        margin-right: 25px;
+        margin-top: 75px;
+        margin-bottom: 45px;
+    }
+
+    .headlineText{
+      width: auto;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .headline{
+        gap: 9px;
+        h2{
+            font-size: 45px;
+        }
+    }
+    .headlineBorder{
+        width: 20px;
+    }
+    .headlineTex{
+        h3{
+            font-size: 23px;
+        }
+    }
+
+    .contactBackgroundShadow{
+        
+        top: 6520pxpx;
+       
+  }
+}

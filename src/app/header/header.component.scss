@@ -1,0 +1,454 @@
+.headerContainer {
+    display: flex;
+    height: 900px;
+    width: 100vw;
+}
+
+.photoShape {
+    display: flex;
+    position: absolute;
+    top: 379px;
+    width: 100vw;
+    height: 1010px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.photo {
+    display: flex;
+    position: absolute;
+    top: 90px;
+    img {
+        max-width: 646px;
+        max-height: 805px;
+    }
+}
+
+.photoShadow {
+    display: flex;
+    position: absolute;
+    height: 80%;
+    left: 110px;
+    top: 220px;
+    overflow: hidden;
+}
+
+.headline {
+    display: flex;
+    position: absolute;
+    top: 237px;
+    right: 100px;
+    align-items: center;
+}
+
+.leftHeadline {
+    color: white;
+    rotate: 270deg;
+    font-size: 64px;
+    white-space: nowrap;
+    position: relative;
+    left: 9px;
+}
+
+.headlineName {
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    white-space: nowrap;
+    position: relative;
+    top: 9px;
+}
+
+.headlineJob {
+    color: rgb(72,69,242);
+    position: relative;
+    top: -10px;
+    font-size: 58px;
+    font-weight: 400;
+}
+
+.letsTalkButton {
+        display: flex;
+    position: absolute;
+    top: 225px;
+    right: 260px;
+    min-width: 168px;
+    min-height: 58px;
+    cursor: pointer;
+    transition: transform 325ms ease-in-out;
+    z-index: 4;
+}
+
+.letsTalkButton:hover {
+    transform: scale(1.1);
+}
+
+.letsTalkButton a {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: rgb(1,186,227);
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.letsTalkButton a:hover {
+    background-color: rgb(72,69,242);
+}
+
+.contactHeadline {
+    display: flex;
+    position: absolute;
+    top: 830px;
+    align-items: center;
+    gap: 42px;
+    z-index: 2;
+    width: 100%;
+
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        font-weight: 400;
+
+        &:hover {
+            color: rgb(1,187,228);
+        }
+    }
+}
+
+.contactBorderLine {
+    border: 2px solid rgb(1,187,228);
+    width: 100px;
+}
+
+.contactIconBox {
+    display: flex;
+    gap: 42px;
+}
+
+.contactIcon {
+    display: flex;
+
+    &:hover {
+        scale: 1.2;
+    }
+}
+
+.scrollDownContainer {
+    display: flex;
+    position: absolute;
+    right: 35px;
+    rotate: 90deg;
+    color: white;
+    top: 770px;
+    align-items: center;
+    flex-direction: row;
+    font-size: 23px;
+    line-height: 27px;
+    z-index: 3;
+    cursor: default;
+    animation: moveUpDown 2s linear infinite;
+
+    img {
+        rotate: 270deg;
+    }
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        top: 770px;
+    }
+
+    50% {
+        top: 740px;
+        /* Ändere diese Zahl, um die vertikale Entfernung zu steuern */
+    }
+}
+
+@keyframes jumpIcon {
+    0% {
+        animation-timing-function: ease-in;
+        transform: translateX(-12px);
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateX(-8px);
+    }
+
+    60% {
+        animation-timing-function: ease-in;
+        transform: translateX(-5px);
+    }
+
+    80% {
+        animation-timing-function: ease-in;
+        transform: translateX(-2px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateX(0px);
+    }
+}
+
+
+@media screen and (min-width: 3000px) {
+    .photo{
+        left: 25%;
+    }
+
+    .photoShadow{
+        left: 17%;
+    }
+
+    .headline{
+        right: 24.5%;
+    }
+
+    .contactBorderLine{
+        border: 2px solid rgb(1,187,228);
+        width: 25%;
+    }
+
+
+    .scrollDownContainer{
+        right: 23%;
+    }
+}
+
+
+
+@media screen and (max-width: 3000px) {
+    .photo{
+        left: 20%;
+    }
+
+    .photoShadow{
+        left: 12%;
+    }
+
+    .headline{
+        right: 19.5%;
+    }
+
+    .contactBorderLine{
+        border: 2px solid rgb(1,187,228);
+        width: 20%;
+    }
+
+    .scrollDownContainer{
+        right: 18%;
+    }
+}
+  
+  
+@media screen and (max-width: 1900px) {
+    .photo{
+        left: 10%;
+    }
+
+    .photoShadow{
+        left: 2%;
+    }
+
+    .headline{
+        right: 9.5%;
+    }
+
+    .contactBorderLine{
+        border: 2px solid rgb(1,187,228);
+        width: 10%;
+    }
+
+
+    .scrollDownContainer{
+        right: 8%;
+    }
+  }
+  
+
+
+@media screen and (max-width: 1350px) {
+    .headlineName {
+        font-size: 66px;
+    }
+
+    .leftHeadline {
+        font-size: 50px;
+    }
+
+    .headlineJob {
+        top: -14px;
+        font-size: 45px;
+    }
+
+    .letsTalkButton {
+        top: 185px;
+        right: 170px;
+    }
+
+    .photoShape {
+        width: 100%;
+
+        img {
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .headlineName {
+        font-size: 50px;
+    }
+
+    .leftHeadline {
+        font-size: 35px;
+    }
+
+    .headlineJob {
+        top: -13px;
+        font-size: 35px;
+    }
+
+    .letsTalkButton {
+        top: 135px;
+        right: 110px;
+    }
+
+    .photo {
+        top: 120px;
+        left: 90px;
+
+        img {
+            max-height: 720px;
+        }
+    }
+} 
+
+@media screen and (max-width: 950px) {
+    .photo {
+        top: 160px;
+        left: 90px;
+
+        img {
+            max-height: 620px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .scrollDownContainer {
+        display: none;
+    }
+
+    .headline {
+        top: 680px;
+        right: 0px;
+        left: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .letsTalkButton {
+        top: 130px;
+        right: -20px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactHeadline {
+        top: 920px;
+    }
+
+    .photo {
+        top: 100px;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .photoShape {
+        top: 266px;
+    }
+
+    .photoShadow {
+        top: 140px;
+        left: 0px;
+        right: 0px;
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (max-width: 667px) {
+    .emailAdress {
+        display: none;
+    }
+
+    .photo {
+        height: 465px;
+    }
+
+    .photoShape {
+        top: 150px;
+    }
+
+    .headline {
+        top: 560px;
+        right: 15px;
+        left: -15px;
+    }
+
+    .headlineName {
+        font-size: 40px;
+    }
+
+    .headlineJob {
+        top: -3px;
+        font-size: 27px;
+        white-space: nowrap;
+    }
+
+    .leftHeadline {
+        font-size: 27px;
+        top: 6px;
+    }
+
+    .letsTalkButton {
+        top: 120px;
+    }
+
+    .contactHeadline {
+        top: 800px;
+    }
+
+    .contactIconBox {
+        width: 100vw;
+        left: -4px;
+        right: 0px;
+        position: absolute;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    .contactBorderLine {
+        width: 10%;
+    }
+
+}
