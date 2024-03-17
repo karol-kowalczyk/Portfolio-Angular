@@ -45,7 +45,7 @@ export class ContactComponent {
   async sendData(formData: FormData) {
     try {
 
-      const response = await fetch("https://formspree.io/f/myyqoebp", {
+      const response = await fetch("https://kowalczyk-karol.de/sendMail.php", {
         method: "POST",
         body: formData,
         headers: {

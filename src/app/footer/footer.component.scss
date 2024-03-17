@@ -1,4 +1,4 @@
-.footerContainer{
+.footer-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,16 +13,10 @@
 }
 
 
-.footerLineContainer{
+.footer-line-container{
     display: flex;
     flex-direction: column;
     gap: 5px;
-
-    img{
-        height: 40px;
-        width: 65px;
-        cursor: pointer;
-    }
 
     a{
         text-decoration: none;
@@ -52,19 +46,19 @@
     }
 }
 
-.copyRightContainer{
+.copy-right-container{
     display: flex;
     p {
        font-size: 28px; 
     }
 }
 
-.contactFooter{
+.contact-footer{
     display: flex;
     gap: 42px;
 }
 
-.contactIcon{
+.contact-icon{
     display: flex;
 
     &:hover{
@@ -72,19 +66,19 @@
     }
 }
 
-.impPriContainerResponsiv{
+.imp-pri-containerR-responsive {
     display: none;
 }
 
 @media screen and (min-width: 3000px) {
-    .footerContainer{
+    .footer-container{
     padding-left: 25%;
     padding-right: 25%;
     }
 }
 
 @media screen and (max-width: 3000px) {
-    .footerContainer{
+    .footer-container{
     padding-left: 20%;
     padding-right: 20%;
     }
@@ -93,7 +87,7 @@
 
 
 @media screen and (max-width: 1900px) {
-    .footerContainer{
+    .footer-container{
     padding-left: 10%;
     padding-right: 10%;
     }
@@ -102,18 +96,18 @@
 
 @media screen and (max-width: 900px) {
     
-    .footerContainer{
+    .footer-container{
         padding-top: 66px;
         flex-direction: column;
         justify-content: center;
       
     }
 
-    .impPriContainer{
+    .imp-pri-container{
         display: none;
     }
 
-    .impPriContainerResponsiv{
+    .imp-pri-containerR-responsive{
     display: flex;
     gap: 5px;
     padding-top: 28px;
@@ -147,7 +141,7 @@
     }
 
     @media screen and (max-width: 767px) {
-        .footerContainer{
+        .footer-container {
             padding-top: 66px;
             padding-left: 0px;
             padding-right: 0px;

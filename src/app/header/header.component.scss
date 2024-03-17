@@ -1,10 +1,10 @@
-.headerContainer {
+.header-container {
     display: flex;
     height: 900px;
     width: 100vw;
 }
 
-.photoShape {
+.photo-shape {
     display: flex;
     position: absolute;
     top: 379px;
@@ -21,13 +21,14 @@
     display: flex;
     position: absolute;
     top: 90px;
+
     img {
         max-width: 646px;
         max-height: 805px;
     }
 }
 
-.photoShadow {
+.photo-shadow {
     display: flex;
     position: absolute;
     height: 80%;
@@ -44,7 +45,7 @@
     align-items: center;
 }
 
-.leftHeadline {
+.left-headline {
     color: white;
     rotate: 270deg;
     font-size: 64px;
@@ -53,7 +54,7 @@
     left: 9px;
 }
 
-.headlineName {
+.headline-name {
     color: white;
     font-size: 80px;
     font-weight: 700;
@@ -62,16 +63,19 @@
     top: 9px;
 }
 
-.headlineJob {
-    color: rgb(72,69,242);
+.headline-job {
+    color: rgb(72, 69, 242);
     position: relative;
     top: -10px;
     font-size: 58px;
     font-weight: 400;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
 }
 
-.letsTalkButton {
-        display: flex;
+.lets-talk-button {
+    display: flex;
     position: absolute;
     top: 225px;
     right: 260px;
@@ -82,14 +86,14 @@
     z-index: 4;
 }
 
-.letsTalkButton:hover {
+.lets-talk-button:hover {
     transform: scale(1.1);
 }
 
-.letsTalkButton a {
+.lets-talk-button a {
     padding: 15px 30px;
     border-radius: 10px;
-    background-color: rgb(1,186,227);
+    background-color: rgb(1, 186, 227);
     color: white;
     text-decoration: none;
     font-size: 23px;
@@ -97,11 +101,11 @@
     line-height: 27px;
 }
 
-.letsTalkButton a:hover {
-    background-color: rgb(72,69,242);
+.lets-talk-button a:hover {
+    background-color: rgb(72, 69, 242);
 }
 
-.contactHeadline {
+.contact-headline {
     display: flex;
     position: absolute;
     top: 830px;
@@ -118,22 +122,22 @@
         font-weight: 400;
 
         &:hover {
-            color: rgb(1,187,228);
+            color: rgb(1, 187, 228);
         }
     }
 }
 
-.contactBorderLine {
-    border: 2px solid rgb(1,187,228);
+.contact-border-line {
+    border: 2px solid rgb(1, 187, 228);
     width: 100px;
 }
 
-.contactIconBox {
+.contact-icon-box {
     display: flex;
     gap: 42px;
 }
 
-.contactIcon {
+.contact-icon {
     display: flex;
 
     &:hover {
@@ -203,25 +207,25 @@
 
 
 @media screen and (min-width: 3000px) {
-    .photo{
+    .photo {
         left: 25%;
     }
 
-    .photoShadow{
+    .photo-shadow {
         left: 17%;
     }
 
-    .headline{
+    .headline {
         right: 24.5%;
     }
 
-    .contactBorderLine{
-        border: 2px solid rgb(1,187,228);
+    .contact-border-line {
+        border: 2px solid rgb(1, 187, 228);
         width: 25%;
     }
 
 
-    .scrollDownContainer{
+    .scrollDownContainer {
         right: 23%;
     }
 }
@@ -229,75 +233,75 @@
 
 
 @media screen and (max-width: 3000px) {
-    .photo{
+    .photo {
         left: 20%;
     }
 
-    .photoShadow{
+    .photo-shadow {
         left: 12%;
     }
 
-    .headline{
+    .headline {
         right: 19.5%;
     }
 
-    .contactBorderLine{
-        border: 2px solid rgb(1,187,228);
+    .contact-border-line {
+        border: 2px solid rgb(1, 187, 228);
         width: 20%;
     }
 
-    .scrollDownContainer{
+    .scrollDownContainer {
         right: 18%;
     }
 }
-  
-  
+
+
 @media screen and (max-width: 1900px) {
-    .photo{
+    .photo {
         left: 10%;
     }
 
-    .photoShadow{
+    .photo-shadow {
         left: 2%;
     }
 
-    .headline{
+    .headline {
         right: 9.5%;
     }
 
-    .contactBorderLine{
-        border: 2px solid rgb(1,187,228);
+    .contact-border-line {
+        border: 2px solid rgb(1, 187, 228);
         width: 10%;
     }
 
 
-    .scrollDownContainer{
+    .scrollDownContainer {
         right: 8%;
     }
-  }
-  
+}
+
 
 
 @media screen and (max-width: 1350px) {
-    .headlineName {
+    .headline-name {
         font-size: 66px;
     }
 
-    .leftHeadline {
+    .left-headline {
         font-size: 50px;
     }
 
-    .headlineJob {
+    .headline-job {
         top: -14px;
         font-size: 45px;
     }
 
-    .letsTalkButton {
+    .lets-talk-button {
         top: 185px;
         right: 170px;
     }
 
-    .photoShape {
+    .photo-shape {
         width: 100%;
 
         img {
@@ -307,20 +311,20 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .headlineName {
+    .headline-name {
         font-size: 50px;
     }
 
-    .leftHeadline {
+    .left-headline {
         font-size: 35px;
     }
 
-    .headlineJob {
+    .headline-job {
         top: -13px;
         font-size: 35px;
     }
 
-    .letsTalkButton {
+    .lets-talk-button {
         top: 135px;
         right: 110px;
     }
@@ -333,7 +337,7 @@
             max-height: 720px;
         }
     }
-} 
+}
 
 @media screen and (max-width: 950px) {
     .photo {
@@ -361,7 +365,7 @@
         justify-content: center;
     }
 
-    .letsTalkButton {
+    .lets-talk-button {
         top: 130px;
         right: -20px;
         left: 0px;
@@ -369,7 +373,7 @@
         justify-content: center;
     }
 
-    .contactHeadline {
+    .contact-headline {
         top: 920px;
     }
 
@@ -380,11 +384,11 @@
         justify-content: center;
     }
 
-    .photoShape {
+    .photo-shape {
         top: 266px;
     }
 
-    .photoShadow {
+    .photo-shadow {
         top: 140px;
         left: 0px;
         right: 0px;
@@ -395,7 +399,7 @@
 }
 
 @media screen and (max-width: 667px) {
-    .emailAdress {
+    .email-adress {
         display: none;
     }
 
@@ -403,7 +407,7 @@
         height: 465px;
     }
 
-    .photoShape {
+    .photo-shape {
         top: 150px;
     }
 
@@ -413,30 +417,30 @@
         left: -15px;
     }
 
-    .headlineName {
+    .headline-name {
         font-size: 40px;
     }
 
-    .headlineJob {
+    .headline-job {
         top: -3px;
         font-size: 27px;
         white-space: nowrap;
     }
 
-    .leftHeadline {
+    .left-headline {
         font-size: 27px;
         top: 6px;
     }
 
-    .letsTalkButton {
+    .lets-talk-button {
         top: 120px;
     }
 
-    .contactHeadline {
+    .contact-headline {
         top: 800px;
     }
 
-    .contactIconBox {
+    .contact-icon-box {
         width: 100vw;
         left: -4px;
         right: 0px;
@@ -447,7 +451,7 @@
 
 @media screen and (max-width: 470px) {
 
-    .contactBorderLine {
+    .contact-border-line {
         width: 10%;
     }
 

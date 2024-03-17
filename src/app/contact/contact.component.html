@@ -1,11 +1,11 @@
-<div class="contactContainer" id="contact">
+<div class="contact-container" id="contact">
   <span class="headline">
-    <div class="headlineBorder"></div>
+    <div class="headline-border"></div>
     <h2 translate>Contact</h2>
   </span>
 
-  <div class="headlineTextContactContainer">
-    <div class="headlineText">
+  <div class="headline-text-contact-container">
+    <div class="headline-text">
       <div data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="1500">
@@ -20,12 +20,12 @@
       <p>{{ 'needFrontendDevMessage' | translate }} <b translate>Contact me!</b></p>
       </div>
     </div>
-    <div class="contactBox">
+    <div class="contact-box">
       <div class="form-container">
         <form  action="https://formspree.io/f/myyqoebp"
         method="POST" (ngSubmit)="sendMail()" [formGroup]="contactForm">
     
-          <div class="inputContainer">
+          <div class="input-container">
             <input [ngClass]="{
               'green-border': contactForm.get('nameInput')?.valid,
               'red-border': contactForm.get('nameInput')?.invalid && (contactForm.get('nameInput')?.dirty || contactForm.get('nameInput')?.touched)
@@ -46,16 +46,16 @@
               </span>
             </div>
     
-            <div class="errorImage" *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
+            <div class="error-image" *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
               <img src="assets/img/error.png" alt="Error Icon">
             </div>
     
-            <div class="confirmImage" *ngIf="contactForm.controls['nameInput'].valid">
+            <div class="confirm-image" *ngIf="contactForm.controls['nameInput'].valid">
               <img src="assets/img/confirm.png" alt="Confirm Icon">
             </div>
           </div>
     
-          <div class="inputContainer">
+          <div class="input-container">
             <input [ngClass]="{
               'green-border': contactForm.get('emailInput')?.valid,
               'red-border': contactForm.get('emailInput')?.invalid && (contactForm.get('emailInput')?.dirty || contactForm.get('emailInput')?.touched)
@@ -74,16 +74,16 @@
               </span>
             </div>
     
-            <div class="errorImage" *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
+            <div class="error-image" *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
               <img src="assets/img/error.png" alt="Error Icon">
             </div>
     
-            <div class="confirmImage" *ngIf="contactForm.controls['emailInput'].valid">
+            <div class="confirm-image" *ngIf="contactForm.controls['emailInput'].valid">
               <img src="assets/img/confirm.png" alt="Confirm Icon">
             </div>
           </div>
     
-          <div class="inputContainer">
+          <div class="input-container">
             <textarea [ngClass]="{
               'green-border': contactForm.get('messageInput')?.valid,
               'red-border': contactForm.get('messageInput')?.invalid && (contactForm.get('messageInput')?.dirty || contactForm.get('messageInput')?.touched)
@@ -102,17 +102,17 @@
               </span>
             </div>
     
-            <div class="errorImage" *ngIf="contactForm.controls['messageInput'].invalid && (contactForm.controls['messageInput'].dirty || contactForm.controls['messageInput'].touched)">
+            <div class="error-image" *ngIf="contactForm.controls['messageInput'].invalid && (contactForm.controls['messageInput'].dirty || contactForm.controls['messageInput'].touched)">
               <img src="assets/img/error.png" alt="Error Icon">
             </div>
     
-            <div class="confirmImage" *ngIf="contactForm.controls['messageInput'].valid">
+            <div class="confirm-image" *ngIf="contactForm.controls['messageInput'].valid">
               <img src="assets/img/confirm.png" alt="Confirm Icon">
             </div>
           </div>
     
-          <div class="buttonContainer">
-            <button class="sendMessageButton" 
+          <div class="button-container">
+            <button class="send-message-button" 
               [title]="contactForm.valid ? '' : 'First you need to fill out the contact form'" 
               [disabled]="!contactForm.valid">
               <span>{{ 'sendMessageButtonText' | translate }}</span>
@@ -120,11 +120,11 @@
           </div>
         </form>
       </div>
-      <div class="contactBackgroundShadow"><img src="assets/img/purple3.png" alt=""></div>
+      <div class="contact-background-shadow"><img src="assets/img/purple3.png" alt=""></div>
     </div>
     
   </div>
-  <div class="goUpContainer">
+  <div class="go-up-container">
     <a routerLink="/">
       <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 15.828L13.343 20.485C12.9525 20.8755 12.3194 20.8755 11.929 20.485C11.5385 20.0945 11.5385 19.4615 11.929 19.071L18.2928 12.7071C18.6834 12.3166 19.3165 12.3166 19.7071 12.7071L26.071 19.071C26.4614 19.4615 26.4614 20.0945 26.071 20.485C25.6805 20.8755 25.0474 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5522 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z" fill="white"/>

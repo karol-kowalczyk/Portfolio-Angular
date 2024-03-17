@@ -1,10 +1,10 @@
-.contactContainer {
+.contact-container {
     color: white;
     padding-top: 100px;
 }
 
 
-.headlineBorder {
+.headline-border {
     display: flex;
     width: 50px;
     border: 2px solid rgb(1,186,227);
@@ -22,7 +22,7 @@
     }
 }
 
-.headlineTextContactContainer {
+.headline-text-contact-container {
     display: flex;
     margin-top: 85px;
     gap: 150px;
@@ -40,7 +40,7 @@
     }
 }
 
-.contactBackgroundShadow {
+.contact-background-shadow {
     display: flex;
     position: absolute;
     overflow: hidden;
@@ -50,11 +50,11 @@
     left: 0px;
 }
 
-.headlineText {
+.headline-text {
     width: 473px;
 }
 
-.contactBox {
+.contact-box {
     display: flex;
     flex-direction: column;
     width: 617px;
@@ -63,12 +63,12 @@
     }
 
 
-.buttonContainer{
+.button-container{
     display: flex;
     justify-content: center;
 }
 
-.sendMessageButton {
+.send-message-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,8 +89,8 @@
     }
 }
 
-.sendMessageButton:disabled,
-.sendMessageButton.disabled {
+.send-message-button:disabled,
+.send-message-button.disabled {
   cursor: not-allowed;
   background-color: rgba(128, 128, 128, 0.5);
   color: rgba(255, 255, 255, 0.7);
@@ -99,7 +99,7 @@
 }
 
 /* CSS für Hover-Effekte */
-.sendMessageButton:not(:disabled):hover {
+.send-message-button:not(:disabled):hover {
   transform: scale(1.1);
   background-color: rgb(1,186,227);
 }
@@ -111,14 +111,14 @@
     color: red;
 }
 
-.errorImage {
+.error-image {
     position: absolute;
     right: 20px;
     top: 10px;
     z-index: 1;
 }
 
-.confirmImage {
+.confirm-image {
     position: absolute;
     right: 20px;
     top: 10px;
@@ -153,7 +153,7 @@
         }
 }
 
-.inputContainer{
+.input-container{
     display: flex;
     position: relative;
     flex-direction: column;
@@ -215,18 +215,18 @@ textarea {
     border: 1px solid red !important;
 }
 
-.goUpContainer {
+.go-up-container {
     display: flex;
     justify-content: flex-end;
     margin-right: 100px;
     margin-top: 55px;
   }
 
-  .goUpContainer svg:hover path {
+  .go-up-container svg:hover path {
     fill: #70E61C;
   }
 
-  .goUpContainer svg:hover rect {
+  .go-up-container svg:hover rect {
     stroke: #70E61C;
   }
 
@@ -275,55 +275,55 @@ textarea {
 }
 
 @media screen and (min-width: 3000px) {
-    .headlineBorder{
+    .headline-border{
         width: 23%;
     }
-    .headlineTextContactContainer{
+    .headline-text-contact-container{
         margin-left: 25%;
         margin-right: 25%;
        
     }
 
-    .goUpContainer{
+    .go-up-container{
         margin-right: 25%;
     }
 }
 
 
 @media screen and (max-width: 3000px) {
-    .headlineBorder{
+    .headline-border{
         width: 18%;
     }
-    .headlineTextContactContainer{
+    .headline-text-contact-container{
         margin-left: 20% !important;
         margin-right: 20% !important;
      
     }
 
-    .goUpContainer{
+    .go-up-container{
         margin-right: 20%;
     }
 }
 
 
 @media screen and (max-width: 1900px) {
-    .headlineBorder{
+    .headline-border{
         width: 8%;
     }
 
-    .headlineTextContactContainer{
+    .headline-text-contact-container{
         margin-left: 10% !important;
         margin-right: 10% !important;
        
     }
 
-    .goUpContainer{
+    .go-up-container{
         margin-right: 10%;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .headlineTextContactContainer{
+    .headline-text-contact-container{
     display: flex;
     flex-direction: column;
     margin-top: 25px;
@@ -333,17 +333,17 @@ textarea {
     
     }
 
-    .contactBox{
+    .contact-box{
         width: auto;
     }
 
-    .goUpContainer{
+    .go-up-container{
         margin-right: 25px;
         margin-top: 75px;
         margin-bottom: 45px;
     }
 
-    .headlineText{
+    .headline-text{
       width: auto;
     }
 }
@@ -355,7 +355,7 @@ textarea {
             font-size: 45px;
         }
     }
-    .headlineBorder{
+    .headline-border{
         width: 20px;
     }
     .headlineTex{
@@ -364,7 +364,7 @@ textarea {
         }
     }
 
-    .contactBackgroundShadow{
+    .contact-background-shadow{
         
         top: 6520pxpx;
        

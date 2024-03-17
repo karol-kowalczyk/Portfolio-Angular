@@ -1,4 +1,4 @@
-.impContainer{
+.impressum-container{
     display: flex;
     justify-content: flex-start;
     padding-top: 120px;
@@ -16,14 +16,14 @@
         color: white;
 
         &:hover{
-            color: rgba(112, 230, 28, 1);
+            color: rgb(1,186,227);
         }
     }
 }
 
 @media screen and (max-width: 767px) {
 
-    .impContainer{
+    .impressum-container{
         padding-left: 25px;
         padding-right: 25px;
     }
