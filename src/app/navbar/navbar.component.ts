@@ -14,7 +14,7 @@ export class NavbarComponent {
 
   toggleNav() {
     this.isMenuOpen = !this.isMenuOpen;
-    const burgerLinks = document.querySelector('.burgerLinks') as HTMLElement | null;
+    const burgerLinks = document.querySelector('.burger-links') as HTMLElement | null;
     if (burgerLinks) {
       burgerLinks.classList.toggle('show');
     }

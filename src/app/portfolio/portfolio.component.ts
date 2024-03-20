@@ -16,7 +16,7 @@ export class PortfolioComponent implements OnInit {
         "de": "Ein Aufgaben-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
       },
       "image": "join.png",
-      "url": "https://kowalczyk-karol.de/Join/",
+      "url": "https://kowalczyk-karol.de/join/index.html",
       "github": "https://github.com/karol-kowalczyk/Join"
     },
     {
@@ -27,8 +27,8 @@ export class PortfolioComponent implements OnInit {
         "de": "Jump-and-Run-Spiel auf Basis eines objektorientierten Ansatzes. Helfen Sie Pepe, Münzen und Tabasco Flaschen zu finden, um gegen die verrückte Henne zu kämpfen."
       },
       "image": "elpolloloco.png",
-      "url": "https://karol-kowalczyk.de/El-Pollo-Loco/",
-      "github": "https://github.com/kowalczyk-karol/El_Pollo_Loco"
+      "url": "https://kowalczyk-karol.de/El_Pollo_Loco/",
+      "github": "https://github.com/karol-kowalczyk/El_Pollo_Loco"
     },
   ];
 

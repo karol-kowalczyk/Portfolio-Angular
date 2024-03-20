@@ -189,14 +189,23 @@
 
 
 @media screen and (max-width: 970px) {
-  .skillContainer {
+  .skill-container {
     flex-direction: column-reverse;
     justify-content: space-between;
     padding-top: 135px;
     align-items: flex-end;
   }
 
-  .letsTalkButton {
+  .background-shadow-skill {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    width: 95%;
+    opacity: 0.5;
+  }
+  
+
+  .lets-talk-button {
     display: none;
   }
 
