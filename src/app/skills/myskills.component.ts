@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 export class MyskillsComponent {
 skillIcon =[
   "Angular",
-  "Rest-Api",
-  "css",
+  "REST-API",
+  "CSS",
   "Firebase",
-  "GIT",
-  "html",
+  "Git",
+  "HTML",
   "JavaScript",
   "Scrum",
-  "typescript",
+  "TypeScript",
   "Material Design",
 ];
 }
