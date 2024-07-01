@@ -18,6 +18,15 @@ export class ContactComponent {
   });
 
 
+
+  // emailjs.send("service_8j2swyq","template_ss9byks",{
+  //   from_name: "Karol",
+  //   message: "Kowalczyk",
+  //   from_email: "KarolKowalczykPL@Gmail.com",
+  //   reply_to: "SJNDDJD",
+  //   });
+
+
   /** takes the value of the inputfields and sends the FormData to the mail adress */
   sendMail() {
     this.errorInfo = false;
