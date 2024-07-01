@@ -62,7 +62,6 @@
     left: -80px;
     height: 800px;
     opacity: 0.4;
-    
 }
 
 .second-portfolio-background {
@@ -89,6 +88,11 @@
     gap: 35px;
     margin: 0 100px;
     z-index: 3;
+}
+
+.disabled-link {
+    cursor: not-allowed;
+    opacity: 0.3; 
 }
 
 .project-image-container {

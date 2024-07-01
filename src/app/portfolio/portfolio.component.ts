@@ -30,15 +30,15 @@ export class PortfolioComponent implements OnInit {
       "url": "https://kowalczyk-karol.de/El_Pollo_Loco/",
       "github": "https://github.com/karol-kowalczyk/El_Pollo_Loco"
     },     {
-      "name": "DABubble",
+      "name": "Coming soon: DA Bubble",
       "languages": "Angular | TypeScript | HTML | SCSS | Firebase",
       "translations": {
         "en": "A Slack clone app that facilitates smooth team communication and collaboration through messaging, file sharing, and customizable channels to enhance workplace efficiency.",
         "de": "Eine Slack-ähnliche App, die reibungslose Teamkommunikation und Zusammenarbeit durch Messaging, Dateifreigabe und anpassbare Kanäle ermöglicht, um die Effizienz am Arbeitsplatz zu steigern."
       },
-      "image": "elpolloloco.png",
-      "url": "https://kowalczyk-karol.de/El_Pollo_Loco/",
-      "github": "https://github.com/karol-kowalczyk/El_Pollo_Loco"
+      "image": "screenshot-dabubble.png",
+      // "url": "",
+      // "github": ""
     }
   ];
 
