@@ -1,4 +1,4 @@
-<div class="contact-container" id="contact">
+<div [formGroup]="form" class="contact-container" id="contact">
   <span class="headline">
     <div class="headline-border"></div>
     <h2 translate>Contact</h2>
@@ -22,99 +22,99 @@
     </div>
     <div class="contact-box">
       <div class="form-container">
-        <form  action="https://formspree.io/f/myyqoebp"
-        method="POST" (ngSubmit)="sendMail()" [formGroup]="contactForm">
+        <form  action="javascript:void(0)"
+        method="POST" (ngSubmit)="sendMail()" [formGroup]="form">
     
           <div class="input-container">
             <input [ngClass]="{
-              'green-border': contactForm.get('nameInput')?.valid,
-              'red-border': contactForm.get('nameInput')?.invalid && (contactForm.get('nameInput')?.dirty || contactForm.get('nameInput')?.touched)
+              'green-border': form.get('from_name')?.valid,
+              'red-border': form.get('from_name')?.invalid && (form.get('from_name')?.dirty || form.get('from_name')?.touched)
             }" 
             minlength="3" 
             onkeydown="return /[a-z, ]/i.test(event.key)" 
-            formControlName="nameInput" 
+            formControlName="from_name" 
             [placeholder]="'placeholderName' | translate" 
             type="text" 
             name="name" />
     
-            <div *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
-              <span class="required-informations" *ngIf="contactForm.controls['nameInput'].errors?.['required']">
+            <div *ngIf="form.controls['from_name'].invalid && (form.controls['from_name'].dirty || form.controls['from_name'].touched)">
+              <span class="required-informations" *ngIf="form.controls['from_name'].errors?.['required']">
                 {{ 'nameRequiredErrorMessage' | translate }}
               </span>
-              <span class="required-informations" *ngIf="contactForm.controls['nameInput'].errors?.['minlength']">
+              <span class="required-informations" *ngIf="form.controls['from_name'].errors?.['minlength']">
                 {{ 'nameMinLengthErrorMessage' | translate }}
               </span>
             </div>
     
-            <div class="error-image" *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
+            <div class="error-image" *ngIf="form.controls['from_name'].invalid && (form.controls['from_name'].dirty || form.controls['from_name'].touched)">
               <img src="assets/img/error.png" alt="Error Icon">
             </div>
     
-            <div class="confirm-image" *ngIf="contactForm.controls['nameInput'].valid">
+            <div class="confirm-image" *ngIf="form.controls['from_name'].valid">
               <img src="assets/img/confirm.png" alt="Confirm Icon">
             </div>
           </div>
     
           <div class="input-container">
             <input [ngClass]="{
-              'green-border': contactForm.get('emailInput')?.valid,
-              'red-border': contactForm.get('emailInput')?.invalid && (contactForm.get('emailInput')?.dirty || contactForm.get('emailInput')?.touched)
+              'green-border': form.get('from_email')?.valid,
+              'red-border': form.get('from_email')?.invalid && (form.get('emailInput')?.dirty || form.get('from_email')?.touched)
             }" 
-            formControlName="emailInput" 
+            formControlName="from_email" 
             [placeholder]="'placeholderEmail' | translate" 
             type="email" 
             name="email" />
     
-            <div *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
-              <span class="required-informations" *ngIf="contactForm.controls['emailInput'].errors?.['required']">
+            <div *ngIf="form.controls['from_email'].invalid && (form.controls['from_email'].dirty || form.controls['from_email'].touched)">
+              <span class="required-informations" *ngIf="form.controls['from_email'].errors?.['required']">
                 {{ 'emailRequiredErrorMessage' | translate }}
               </span>
-              <span class="required-informations" *ngIf="contactForm.controls['emailInput'].hasError('email')">
+              <span class="required-informations" *ngIf="form.controls['from_email'].hasError('email')">
                 {{ 'invalidEmailErrorMessage' | translate }}
               </span>
             </div>
     
-            <div class="error-image" *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
+            <div class="error-image" *ngIf="form.controls['from_email'].invalid && (form.controls['from_email'].dirty || form.controls['from_email'].touched)">
               <img src="assets/img/error.png" alt="Error Icon">
             </div>
     
-            <div class="confirm-image" *ngIf="contactForm.controls['emailInput'].valid">
+            <div class="confirm-image" *ngIf="form.controls['from_email'].valid">
               <img src="assets/img/confirm.png" alt="Confirm Icon">
             </div>
           </div>
     
           <div class="input-container">
             <textarea [ngClass]="{
-              'green-border': contactForm.get('messageInput')?.valid,
-              'red-border': contactForm.get('messageInput')?.invalid && (contactForm.get('messageInput')?.dirty || contactForm.get('messageInput')?.touched)
+              'green-border': form.get('message')?.valid,
+              'red-border': form.get('message')?.invalid && (form.get('message')?.dirty || form.get('message')?.touched)
             }" 
-            formControlName="messageInput" 
+            formControlName="message" 
             [placeholder]="'placeholderMessage' | translate" 
             cols="30" 
             rows="10"></textarea>
     
-            <div *ngIf="contactForm.controls['messageInput'].invalid && (contactForm.controls['messageInput'].dirty || contactForm.controls['messageInput'].touched)">
-              <span class="required-informations" *ngIf="contactForm.controls['messageInput'].errors?.['required']">
+            <div *ngIf="form.controls['message'].invalid && (form.controls['message'].dirty || form.controls['message'].touched)">
+              <span class="required-informations" *ngIf="form.controls['message'].errors?.['required']">
                 {{ 'messageRequiredErrorMessage' | translate }}
               </span>
-              <span class="required-informations" *ngIf="contactForm.controls['messageInput'].errors?.['minlength']">
+              <span class="required-informations" *ngIf="form.controls['message'].errors?.['minlength']">
                 {{ 'messageMinLengthErrorMessage' | translate }}
               </span>
             </div>
     
-            <div class="error-image" *ngIf="contactForm.controls['messageInput'].invalid && (contactForm.controls['messageInput'].dirty || contactForm.controls['messageInput'].touched)">
+            <div class="error-image" *ngIf="form.controls['message'].invalid && (form.controls['message'].dirty || form.controls['message'].touched)">
               <img src="assets/img/error.png" alt="Error Icon">
             </div>
     
-            <div class="confirm-image" *ngIf="contactForm.controls['messageInput'].valid">
+            <div class="confirm-image" *ngIf="form.controls['message'].valid">
               <img src="assets/img/confirm.png" alt="Confirm Icon">
             </div>
           </div>
-    
+
           <div class="button-container">
             <button class="send-message-button" 
-              [title]="contactForm.valid ? '' : 'First you need to fill out the contact form'" 
-              [disabled]="!contactForm.valid">
+              [title]="form.valid ? '' : 'First you need to fill out the contact form'" 
+              [disabled]="!form.valid">
               <span>{{ 'sendMessageButtonText' | translate }}</span>
             </button>
           </div>
@@ -132,6 +132,7 @@
       </svg>
     </a>
   </div>
+
     
  
   <div class="confirmation-message-in" 

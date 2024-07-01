@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -11,39 +12,60 @@ export class ContactComponent {
   alreadySend = false;
   errorInfo: any = false;
 
-  contactForm = new FormGroup({
-    nameInput: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    emailInput: new FormControl('', [Validators.required, Validators.email]),
-    messageInput: new FormControl('', [Validators.required, Validators.minLength(10)])
-  });
+  // contactForm = new FormGroup({
+  //   from_name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+  //   from_email: new FormControl('', [Validators.required, Validators.email]),
+  //   message: new FormControl('', [Validators.required, Validators.minLength(10)])
+  // });
 
 
+  form: FormGroup = this.fb.group({
+    from_name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    from_email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', [Validators.required, Validators.minLength(10)])
+  })
 
-  // emailjs.send("service_8j2swyq","template_ss9byks",{
-  //   from_name: "Karol",
-  //   message: "Kowalczyk",
-  //   from_email: "KarolKowalczykPL@Gmail.com",
-  //   reply_to: "SJNDDJD",
-  //   });
+  constructor(private fb: FormBuilder) {
+
+  }
+
 
 
   /** takes the value of the inputfields and sends the FormData to the mail adress */
-  sendMail() {
-    this.errorInfo = false;
-    let nameField: any = this.contactForm.controls['nameInput'];
-    let mailField: any = this.contactForm.controls['emailInput'];
-    let messageField: any = this.contactForm.controls['messageInput'];
+  async sendMail() {
+    try {
+      // this.errorInfo = false;
+      // let nameField: any = this.contactForm.controls['nameInput'];
+      // let mailField: any = this.contactForm.controls['emailInput'];
+      // let messageField: any = this.contactForm.controls['messageInput'];
 
-    this.contactForm.disable();
+      // this.contactForm.disable();
 
-    let formData = new FormData();
-    formData.append('name', nameField.value);
-    formData.append('mail', mailField.value);
-    formData.append('message', messageField.value);
-    this.sendData(formData);
+      // let formData = new FormData();
+      // formData.append('name', nameField.value);
+      // formData.append('mail', mailField.value);
+      // formData.append('message', messageField.value);
+      // this.sendData(formData);
 
-    this.confirmationMessage();
-    this.resetContactForm();
+      emailjs.init('Rz0Di7YMPdyJ1vxMx');
+
+      let response = await emailjs.send("service_8j2swyq", "template_ss9byks", {
+        from_name: this.form.value.from_name,
+        from_email: this.form.value.from_email,
+        message: this.form.value.message
+      });
+
+      if (response.status === 200) {  // assuming response has a status property
+        this.confirmationMessage();
+      } else {
+        this.errorMessage();
+      }
+    } catch (error) {
+      this.errorMessage();
+      console.error(error);
+    } finally {
+      this.resetContactForm();
+    }
   }
 
 
@@ -84,8 +106,8 @@ export class ContactComponent {
 
   /** resets and enables the contact form */
   resetContactForm() {
-    this.contactForm.reset();
-    this.contactForm.enable();
+    this.form.reset();
+    this.form.enable();
   }
 
   /** changes booleans to display the confirmation message */
