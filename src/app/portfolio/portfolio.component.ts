@@ -29,7 +29,17 @@ export class PortfolioComponent implements OnInit {
       "image": "elpolloloco.png",
       "url": "https://kowalczyk-karol.de/El_Pollo_Loco/",
       "github": "https://github.com/karol-kowalczyk/El_Pollo_Loco"
-    },
+    },     {
+      "name": "DABubble",
+      "languages": "JavaScript | HTML | CSS",
+      "translations": {
+        "en": "A jump, run, and throw game based on an object-oriented approach. Help Pepe find coins and Tabasco bottles to fight against the crazy hen.",
+        "de": "Jump-and-Run-Spiel auf Basis eines objektorientierten Ansatzes. Helfen Sie Pepe, Münzen und Tabasco Flaschen zu finden, um gegen die verrückte Henne zu kämpfen."
+      },
+      "image": "elpolloloco.png",
+      "url": "https://kowalczyk-karol.de/El_Pollo_Loco/",
+      "github": "https://github.com/karol-kowalczyk/El_Pollo_Loco"
+    }
   ];
 
   constructor(private translate: TranslateService) {
